@@ -1,0 +1,125 @@
+
+*{
+    margin: 0;
+    padding:0 ;
+    /* border:1px solid red ;   */
+}
+.container{
+    background-image:url(./Polygon\ Luminary.svg) ;
+    height: 100vh;
+    animation: bg 1s ease-out 2 alternate ;
+}
+@keyframes bg {
+    0%{
+        background-size:100% 100%;
+    }
+    100%{
+        background-size:110% 110%;
+        filter: blur(5px);
+    }
+
+    
+}
+
+.main{
+    height: 470px;
+    width: 300px;
+    background: radial-gradient( silver, grey );
+    box-shadow:10px 10px 20px ;
+    margin:0px auto ;
+    border-radius:30px ;
+    border:5px solid black  ;
+    position: relative;
+    top:100px ;
+    overflow: hidden;
+    z-index:0 ;
+}
+
+input{
+    height: 60px;
+    width:90% ;
+    display: block;
+    margin: 20px auto ;
+    border-radius:10px ;
+    background-color: aliceblue;
+    position: relative;
+    font-size:40px ;
+    text-align: right;
+    box-shadow:-5px -5px black ;
+}
+.main::before{
+    content:'' ;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: shd 0.5s linear 2 normal ;
+    transform: skew(25deg);
+    z-index:0 ;
+}
+@keyframes shd {
+    0%{
+        left:-100% ;
+        background-color:grey;
+    }
+    20%{
+        left:-80%;
+        background-color:grey;
+    }
+    40%{
+        left:-60%;
+    }
+    60%{
+        left:-40%;
+    }
+    80%{
+        left:-20% ;
+    }
+    100%{
+        left:0% ;
+    }
+    
+
+}
+    
+button{
+    border-radius:50px ;
+    box-shadow:5px 5px 10px ;
+    font-size:20px ;
+    font-weight: bold;
+    background-color: transparent;
+    transition:0.7s ;
+}
+button:hover{
+    cursor: pointer;
+    background-color:black ;
+    transition:0.7s ;
+    color: white;
+}
+.buttons{
+    height:75%;
+    width:93% ;
+    display: grid;
+    margin:0px auto ;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px ;
+    position: relative;
+    z-index:1 ;
+}
+.btn{
+    grid-area:5/1/6/3 ;
+    background-color:brown ;
+    border-radius:20px ;
+}
+.btn1{
+    grid-area:5/3/6/5 ;
+    background-color: lightgreen ;
+    border-radius:20px ;
+}
+#opr{
+    background-color: orangered;
+    transition:0.5s ;
+}
+#opr:hover{
+    background-color:grey;
+    transition:0.5s
+}
